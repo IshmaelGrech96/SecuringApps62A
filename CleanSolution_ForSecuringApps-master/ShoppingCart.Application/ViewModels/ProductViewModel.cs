@@ -11,6 +11,7 @@ namespace ShoppingCart.Application.ViewModels
         public Guid Id { get; set; }
 
         [Required(ErrorMessage ="Please input name of product")]
+        [RegularExpression("^[a-zA-Z0-9 ]+$", ErrorMessage ="Name must be composed of letters and numbers")]
  
         public string Name { get; set; }
 
